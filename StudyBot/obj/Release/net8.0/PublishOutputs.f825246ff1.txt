@@ -1,7 +1,0 @@
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\StudyBot.exe
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\StudyBot.dll
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\StudyBot.deps.json
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\StudyBot.runtimeconfig.json
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\StudyBot.pdb
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\System.Text.Json.dll
-C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\bin\Release\net8.0\publish\Telegram.Bot.dll
