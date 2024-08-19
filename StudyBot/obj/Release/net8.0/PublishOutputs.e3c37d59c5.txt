@@ -1,0 +1,7 @@
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\StudyBot.exe
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\StudyBot.dll
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\StudyBot.deps.json
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\StudyBot.runtimeconfig.json
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\StudyBot.pdb
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\System.Text.Json.dll
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\out\Telegram.Bot.dll

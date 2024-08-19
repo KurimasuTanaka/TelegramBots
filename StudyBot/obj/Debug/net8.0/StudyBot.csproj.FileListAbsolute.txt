@@ -16,3 +16,4 @@ c:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\obj\
 c:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\obj\Debug\net8.0\StudyBot.pdb
 c:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\obj\Debug\net8.0\StudyBot.genruntimeconfig.cache
 c:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\obj\Debug\net8.0\ref\StudyBot.dll
+C:\Users\Kurimasu Tanaka\Documents\Coding projects\C#\TelegramBots\StudyBot\obj\Debug\net8.0\StudyBot.sourcelink.json
