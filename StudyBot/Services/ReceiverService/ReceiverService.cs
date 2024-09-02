@@ -1,21 +1,17 @@
-
 using Microsoft.Extensions.Logging;
 using StudyBot.Abstract;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 
-namespace StudyBot.Abstract;
-
-public class ReceiverServiceBase<TUpdateHandler> : IReceiverService where TUpdateHandler : IUpdateHandler
+public class ReceiverService : IReceiverService
 {
-
     private readonly ITelegramBotClient _telegramBotClient;
     private readonly IUpdateHandler _updateHandler;
-    private readonly ILogger<ReceiverServiceBase<TUpdateHandler>> _logger;
+    private readonly ILogger<ReceiverService> _logger;
 
-    public ReceiverServiceBase(ITelegramBotClient telegramBotClient, 
+    public ReceiverService(ITelegramBotClient telegramBotClient, 
                                 IUpdateHandler updateHandler, 
-                                ILogger<ReceiverServiceBase<TUpdateHandler>> logger)
+                                ILogger<ReceiverService> logger)
     {
         _telegramBotClient = telegramBotClient;
         _updateHandler = updateHandler;

@@ -1,6 +1,8 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using StudyBot.Abstract;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
@@ -8,19 +10,29 @@ using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 
 
-IHost builder = Host.CreateDefaultBuilder(args).ConfigureServices(async (context, services) =>
+IHost builder = Host.CreateDefaultBuilder(args).ConfigureAppConfiguration(  (context, config)=>
 {
-    services.Configure<BotConfiguration>(context.Configuration.GetSection("BotConfiguration"));
+    config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+    config.AddEnvironmentVariables();
+}).ConfigureServices( (context, services) =>
+{
+    services.Configure<BotSettings>(context.Configuration.GetSection("BotSettings"));
 
     services.AddHttpClient("telegram_bot_client").RemoveAllLoggers().AddTypedClient<ITelegramBotClient>((httpClient, sp) =>
     {
-        BotConfiguration? botConfiguration = sp.GetService<IOptions<BotConfiguration>>()?.Value;
-        TelegramBotClientOptions options = new(botConfiguration.BotToken);
+        BotSettings? botSettings = sp.GetService<IOptions<BotSettings>>()?.Value;
+
+        if (botSettings is null)
+        {
+            throw new InvalidOperationException("Bot settings not found");
+        }
+
+        TelegramBotClientOptions options = new(botSettings.BotToken);
         return new TelegramBotClient(options, httpClient);
     });
 
-    services.AddScoped<UpdateHandler>();
-    services.AddScoped<ReceiverService>();
+    services.AddScoped<IUpdateHandler, UpdateHandler>();
+    services.AddScoped<IReceiverService, ReceiverService>();
     services.AddHostedService<PollingService>();
 }).Build();
 
