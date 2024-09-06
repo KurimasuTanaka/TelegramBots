@@ -5,3 +5,16 @@
 /StudyBot/out
 /StudyBot/appsettings.json
 /DockerDebugFiles
+/SketchpadDatabase/bin
+/SketchpadDatabase/DatabaseFile/Sketchpad.db
+/SketchpadDatabase/obj
+/StudyBot/appsettings.json
+/StudyBot/Migrations
+/SketchpadAPI/bin
+/SketchpadAPI/properties
+/SketchpadAPI/appsettings.json
+/SketchpadAPI/appsettings.Development.json
+/SketchpadAPI/SketchpadAPI.http
+/SketchpadAPI/obj
+
+

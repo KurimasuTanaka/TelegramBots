@@ -26,17 +26,14 @@ public class PollingService : BackgroundService
         {
             try
             {
-
+                _logger.LogInformation("Attempting to receive updates");
                 await _receiverService.ReceiveAsync(cancellationToken);
             }
             catch (Exception e)
             {
                 _logger.LogError("Polling failed with exception: {e}", e);
-
                 await Task.Delay(TimeSpan.FromSeconds(5), cancellationToken);
             }
-
-
         }
     }
 }

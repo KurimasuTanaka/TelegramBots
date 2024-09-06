@@ -8,14 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Telegram.Bot" Version="21.10.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\CalendarInregrationService\" />
-    <Folder Include="Services\NotesService\" />
-    <Folder Include="Services\NotificationService\" />
-    <Folder Include="Services\ToDoService\" />
+    <ProjectReference Include="..\SketchpadDatabase\SketchpadDatabase.csproj" />
   </ItemGroup>
+
+   <ItemGroup>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+   </ItemGroup>
 
 </Project>
